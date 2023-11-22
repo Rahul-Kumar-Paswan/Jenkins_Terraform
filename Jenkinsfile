@@ -11,15 +11,13 @@ pipeline {
 
     stage('Provision Server') {
       environment {
-        AWS_ACCESS_KEY_ID = credentials('aws_access_key')
-        AWS_ACCESS_KEY_KEY = credentials('aws_secret_key')
+        access_key = credentials('aws_access_key')
+        secret_key = credentials('aws_secret_key')
         TF_VAR_env_prefix = 'prod'
         TF_VAR_region = "ap-south-1"
       }
       steps {
         script {
-        //   echo "AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID}"
-        //   echo "AWS_ACCESS_KEY_SECRET: ${AWS_ACCESS_KEY_SECRET}"
           sh "terraform init"
           sh "terraform plan"
           sh "terraform validate"
