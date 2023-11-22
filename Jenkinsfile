@@ -18,8 +18,8 @@ pipeline {
       }
       steps {
         script {
-          echo "AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID}"
-          echo "AWS_ACCESS_KEY_SECRET: ${AWS_ACCESS_KEY_SECRET}"
+        //   echo "AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID}"
+        //   echo "AWS_ACCESS_KEY_SECRET: ${AWS_ACCESS_KEY_SECRET}"
           sh "terraform init"
           sh "terraform plan"
           sh "terraform validate"
