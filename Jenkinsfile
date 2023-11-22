@@ -5,7 +5,7 @@ pipeline {
 
     stage('Testing') {
       steps {
-        echo " Testing stage 1 !!!!!"
+        echo " Testing stage 1 !!!!"
       }
     }
 
@@ -13,8 +13,6 @@ pipeline {
       environment {
         access_key = credentials('aws_access_key')
         secret_key = credentials('aws_secret_key')
-        TF_VAR_env_prefix = 'prod'
-        TF_VAR_region = "ap-south-1"
       }
       steps {
         script {
