@@ -11,8 +11,8 @@ pipeline {
 
     stage('Provision Server') {
       environment {
-        access_key = credentials('jenkins_aws_access_key')
-        secret_key = credentials('jenkins_aws_access_secret')
+        access_key = credentials('aws_access_key')
+        secret_key = credentials('aws_secret_key')
       }
       steps {
         script {
