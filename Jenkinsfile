@@ -19,10 +19,12 @@ pipeline {
           sh "terraform init"
           sh "terraform plan"
           sh "terraform validate"
-          sh "terraform apply -auto-approve"
+        //   sh "terraform apply -auto-approve"
+        sh " terraform destroy -auto-approve"
         }
       }
     }
+    
 
   }
 }
