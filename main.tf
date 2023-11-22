@@ -1,7 +1,5 @@
 provider "aws" {
   region     = "${var.region}"
-  access_key = "${var.access_key}"
-  secret_key = "${var.secret_key}"
 }
 
 # # Retrieve the current environment from the workspace
