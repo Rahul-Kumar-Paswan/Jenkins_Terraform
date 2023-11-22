@@ -21,3 +21,5 @@ terraform.rc
 
 # ignore crash logs
 crash.log
+
+Jenkinsfile
